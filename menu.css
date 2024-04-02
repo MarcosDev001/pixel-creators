@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #121212;
+    color: #fff;
+    padding: 20px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid transparent;
+    animation: neon-border 2s infinite alternate;
+}
+
+@keyframes neon-border {
+    0% {
+        border-color: #00f4ff; 
+    }
+    50% {
+        border-color: #ff00f7;
+    }
+    100% {
+        border-color: #00f4ff;
+    }
+}
+
+.menu {
+    display: flex;
+}
+
+.button {
+    border: 2px solid transparent;
+    background-color: #121212;
+    color: #fff;
+    font-size: 14px; /* Reduzindo o tamanho da fonte */
+    padding: 10px 20px; /* Reduzindo o preenchimento */
+    cursor: pointer;
+    border-radius: 15px; /* Reduzindo o raio da borda */
+    position: relative;
+    overflow: hidden;
+    animation: neon-border 2s infinite alternate;
+}
+
+.button:hover {
+    border-color: #ff00f7;
+}
+
+.button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff00f7, #00f4ff);
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.button:hover:before {
+    transform: scale(1.2);
+}
+
+.logar:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff00f7, #00f4ff);
+    border-radius: 15px;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.registrar:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #00f4ff, #ff00f7);
+    border-radius: 15px;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+
+.container {
+    width: 1138px;
+    height: 500px;
+    background-color: #1c1c1c;
+    margin-top: 191px;
+    margin-left: 49px;
+}
+
+
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px; /* torna as bordas mais arredondadas */
+    transition: background-color 0.3s;
+    background-color: #333; /* adiciona uma cor de fundo padrão */
+    border: 2px solid #fff; /* adiciona uma borda sólida */
+    display: inline-block; /* torna os links em elementos de bloco */
+}
+
+.menu li a:hover {
+    background-color: #555; /* muda a cor de fundo ao passar o mouse */
+}
+.aviso {
+    background-color: #f2f2f2;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.aviso-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}

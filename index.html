@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>SITE EM TESTEEE</title>
+
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+    
+            <h2 style="text-align: center;">Seja bem-vindo(a), Creator</h2>
+            <form id="registerForm">
+                <input type="text" id="nickname" placeholder="Apelido" required><br>
+                <input type="text" id="username" placeholder="Nome de usuário" required><br>
+                <input type="email" id="email" placeholder="E-mail" required><br>
+                <select style="font-family:  'Poppins', sans-serif;" id="habbos" required>
+                    <option value="" disabled selected>Selecione o Habbo que você joga</option>
+                    <option value="habbo1">Iron Hotel</option>
+                    <option value="habbo2">Habblet Hotel</option>
+                    <option value="habbo3">Habblive </option>
+                    <option value="outros">Outros</option>
+                </select><br>
+                <input type="password" id="password" placeholder="Senha" required><br>
+                <input type="submit" value="Criar Conta">
+            </form>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <form id="loginForm">
+            <p>Pixel creators</p>
+            <input type="email" id="emailLogin" placeholder="Email"><br>
+            <input type="password" id="passwordLogin" placeholder="Password"><br>
+            <input type="button" value="Logar" onclick="login()"><br>
+            <a style="color: white;" href="#">Esqueceu sua <b style="font-weight: bolder;">senha creator</b> ?</a>
+            <p class="create-account" onclick="openModal()">Ainda não tem uma conta? <b
+                    style="font-weight: bolder;">Crie agora mesmo!</b></p>
+            <div id="message" class="message"></div>
+        </form>
+        
+
+
+        <div class="drops">
+            <div class="drop drop-1"></div>
+            <div class="drop drop-3"></div>
+            <div class="drop drop-4"></div>
+            <div class="drop drop-5"></div>
+        </div>
+    </div>
+    <div class="loading-screen" id="loadingScreen">
+        <p class="loading-message">Seja bem-vindo(a), Creator</p>
+    </div>
+
+
+    <script>
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+
+        function openModal() {
+            document.getElementById("modal").style.display = "block";
+        }
+
+
+        window.onclick = function (event) {
+            var modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        setTimeout(function () {
+            document.getElementById("loadingScreen").style.display = "none";
+
+        }, 5000);
+
+    </script>
+        <script src="script.js"></script>
+</body>
+
+</html>
